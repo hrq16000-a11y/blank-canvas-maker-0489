@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { supabase } from '@/integrations/supabase/client';
-import { lovable } from '@/integrations/lovable/index';
 import { toast } from 'sonner';
 import { useSeoHead } from '@/hooks/useSeoHead';
 
@@ -52,8 +51,11 @@ const LoginPage = () => {
   };
 
   const handleGoogleLogin = async () => {
-    const { error } = await lovable.auth.signInWithOAuth('google', {
-      redirect_uri: window.location.origin + '/dashboard',
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: window.location.origin + '/dashboard',
+      },
     });
     if (error) toast.error('Erro ao fazer login com Google');
   };
