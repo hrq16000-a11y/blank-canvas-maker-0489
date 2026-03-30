@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 project_id = "tqifeswxbdjvkrvduhxh"
 
 [functions.sitemap]
@@ -12,6 +11,3 @@ verify_jwt = false
 
 [functions.push-notifications]
 verify_jwt = false
-=======
-project_id = "tqifeswxbdjvkrvduhxh"
->>>>>>> 14931d0e8b12acb8851d060f4b486b51b40670df
