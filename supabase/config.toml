@@ -1,6 +1,6 @@
 project_id = "tqifeswxbdjvkrvduhxh"
 
-[functions."sitemap.xml"]
+[functions.sitemap]
 verify_jwt = false
 
 [functions.import-rss]
